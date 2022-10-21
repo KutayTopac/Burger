@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HamburgerciUygulamasi.Siniflar;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace HamburgerciUygulamasi
         public EkstraMalzemeYonetimi()
         {
             InitializeComponent();
+        }
+
+        private void btnEkstraKaydet_Click(object sender, EventArgs e)
+        {
+            OrderDesign.ekstralar.Add(new EkstraMalzeme { EkstraAdi = txtEkstraAdi.Text, EkstraFiyati = nudEkstraFiyati.Value });
+            MessageBox.Show("Ekstra malzeme eklendi");
         }
     }
 }

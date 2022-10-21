@@ -47,6 +47,7 @@
             this.btnEkstraKaydet.TabIndex = 13;
             this.btnEkstraKaydet.Text = "KAYDET";
             this.btnEkstraKaydet.UseVisualStyleBackColor = false;
+            this.btnEkstraKaydet.Click += new System.EventHandler(this.btnEkstraKaydet_Click);
             // 
             // nudEkstraFiyati
             // 

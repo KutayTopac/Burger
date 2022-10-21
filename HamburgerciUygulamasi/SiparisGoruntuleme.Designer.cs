@@ -42,6 +42,8 @@
             // lstSiparisGoruntule
             // 
             this.lstSiparisGoruntule.FormattingEnabled = true;
+            this.lstSiparisGoruntule.HorizontalExtent = 1000;
+            this.lstSiparisGoruntule.HorizontalScrollbar = true;
             this.lstSiparisGoruntule.Location = new System.Drawing.Point(38, 29);
             this.lstSiparisGoruntule.Name = "lstSiparisGoruntule";
             this.lstSiparisGoruntule.Size = new System.Drawing.Size(279, 368);
@@ -148,7 +150,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(694, 423);
             this.Controls.Add(this.lblSatilanUrunAdedi);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblEkstraMalzemeFiyati);
@@ -160,6 +162,7 @@
             this.Controls.Add(this.lstSiparisGoruntule);
             this.Name = "SiparisGoruntuleme";
             this.Text = "SiparisGoruntuleme";
+            this.Load += new System.EventHandler(this.SiparisGoruntuleme_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

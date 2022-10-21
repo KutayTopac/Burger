@@ -91,6 +91,7 @@
             this.btnMenuKaydet.TabIndex = 7;
             this.btnMenuKaydet.Text = "KAYDET";
             this.btnMenuKaydet.UseVisualStyleBackColor = false;
+            this.btnMenuKaydet.Click += new System.EventHandler(this.btnMenuKaydet_Click);
             // 
             // MenuYonetimi
             // 

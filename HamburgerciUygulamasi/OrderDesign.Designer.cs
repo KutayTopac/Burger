@@ -148,9 +148,19 @@
             // nudAdet
             // 
             this.nudAdet.Location = new System.Drawing.Point(132, 437);
+            this.nudAdet.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudAdet.Name = "nudAdet";
             this.nudAdet.Size = new System.Drawing.Size(58, 20);
             this.nudAdet.TabIndex = 15;
+            this.nudAdet.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // btnSiparisEkle
             // 
@@ -174,6 +184,7 @@
             this.btnSiparisOnayla.TabIndex = 17;
             this.btnSiparisOnayla.Text = "SİPARİŞ ONAYLA";
             this.btnSiparisOnayla.UseVisualStyleBackColor = false;
+            this.btnSiparisOnayla.Click += new System.EventHandler(this.btnSiparisOnayla_Click);
             // 
             // label5
             // 
@@ -201,12 +212,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lstMenu.FormattingEnabled = true;
+            this.lstMenu.HorizontalExtent = 1000;
             this.lstMenu.HorizontalScrollbar = true;
             this.lstMenu.Location = new System.Drawing.Point(307, 20);
             this.lstMenu.Name = "lstMenu";
             this.lstMenu.ScrollAlwaysVisible = true;
             this.lstMenu.Size = new System.Drawing.Size(351, 355);
             this.lstMenu.TabIndex = 20;
+            this.lstMenu.SelectedIndexChanged += new System.EventHandler(this.lstMenu_SelectedIndexChanged);
             // 
             // pnlMalzeme
             // 

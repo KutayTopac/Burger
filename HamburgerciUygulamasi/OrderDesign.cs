@@ -14,8 +14,8 @@ namespace HamburgerciUygulamasi
 {
     public partial class OrderDesign : Form
     {
-        public List<Siparis> tumSiparisler = new List<Siparis>();
-        public List<Siparis> mevcutSiparisler = new List<Siparis>();
+        public static List<Siparis> tumSiparisler = new List<Siparis>();
+        public static List<Siparis> mevcutSiparisler = new List<Siparis>();
 
         public static List<Menu> menuler = new List<Menu>()
         {
@@ -46,6 +46,7 @@ namespace HamburgerciUygulamasi
             {
                 cboMenu.Items.Add(item);
             }
+            cboMenu.SelectedIndex = 0;
             foreach (var item in ekstralar)
             {
                 CheckBox a = new CheckBox();
@@ -95,6 +96,25 @@ namespace HamburgerciUygulamasi
             }
             lblToplamTutar.Text = toplamTutar.ToString("c2");
             return toplamTutar;
+        }
+
+        private void btnSiparisOnayla_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Toplam Sipariş Tutarı :" + TutarHesapla() + "\nSatın almayı tamamlamak istiyor musunuz?", "Sipariş Bilgisi", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if(dialogResult == DialogResult.Yes)
+            {
+                lstMenu.Items.Clear();
+                mevcutSiparisler.Clear();
+                TutarHesapla();
+                MessageBox.Show("Siparişiniz Tamamlanmıştır");
+            }
+            else
+                MessageBox.Show("İptal edildi");
+        }
+
+        private void lstMenu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }
